@@ -1,0 +1,55 @@
+{{!< default}}
+{{#post}}
+    <div class="row">
+        <div class="col-md-9">
+            <div class="page-content">
+                <article class="post single {{post_class}}">
+                    {{#if image}}
+                        <div class="post-image">
+                            <img src="{{image}}" alt="">
+                        </div>
+                    {{/if}}
+                    <div class="post-content">
+                        <ul class="post-meta">
+                            <li><i class="ti-time"></i><span>{{date format="DD MMMM YYYY"}}</span></li>
+                            <li><i class="ti-tag"></i><span>{{tags prefix=""}}</span></li>
+                        </ul>
+                        <h1>{{title}}</h1>
+                        <div>{{content}}</div>
+                    </div>
+                    <hr class="sep-line">
+                    <div class="comment-container">
+                        <div class="disqus-container">
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript">
+                                var disqus_shortname = 'utapia';
+                                (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        </div>
+                    </div>
+                    <hr class="sep-line">
+                    <div class="row pagination">
+                        {{#next_post}}
+                            <div class="col-xs-12 col-md-6">
+                                <i class="fa fa-angle-left"></i>
+                                <a class="next" href="{{url}}">{{title}}</a>
+                            </div>
+                        {{/next_post}}
+                        {{#prev_post}}
+                            <div class="col-xs-12 col-md-6">
+                                <a class="next" href="{{url}}">{{title}}</a>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        {{/prev_post}}
+                    </div>
+                </article>
+            </div>
+        </div>
+        {{> "sidebar"}}
+    </div>
+{{/post}}

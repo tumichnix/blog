@@ -1,0 +1,7 @@
+{{#foreach navigation}}
+    {{#if @first}}
+        <li class="icon-link"><a href="{{url absolute="true"}}"><i class="fa fa-home"></i></a></li>
+    {{else}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/if}}
+{{/foreach}}

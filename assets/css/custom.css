@@ -1,0 +1,7 @@
+@import url("themes/theme-blue-navy.css");
+@import url("prism.css");
+.icon.icon-circle.icon-xing { background-color: #006567; }
+.icon.icon-circle.icon-xing:hover, .icon.icon-circle.icon-xing:focus { color: #fff; background-color: #369579; }
+.icon.icon-circle.icon-github { background-color: #333333; }
+.icon.icon-circle.icon-github:hover, .icon.icon-circle.icon-github:focus { color: #fff; background-color: #646464; }
+.pagination > li > span { width: 150px; }

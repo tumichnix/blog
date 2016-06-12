@@ -1,0 +1,14 @@
+{{#foreach posts}}
+    <div class="masonry-item col-sm-12 col-xs-12">
+        <article class="post item {{post_class}}">
+            <div class="post-content">
+                <ul class="post-meta">
+                    <li><i class="ti-time"></i><span>{{date format="DD MMMM YYYY"}}</span></li>
+                    <li><i class="ti-tag"></i><span>{{tags prefix=""}}</span></li>
+                </ul>
+                <h2><a href="{{url}}">{{title}}</a></h2>
+                <p>{{content}}</p>
+            </div>
+        </article>
+    </div>
+{{/foreach}}

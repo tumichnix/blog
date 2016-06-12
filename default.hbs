@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    <!-- Google Web Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{asset "css/styles.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/custom.css"}}" />
+
+</head>
+
+<body class="bg-dark">
+
+    <div id="page-loader" class="bg-white">
+        <svg class="loader" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="3" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg>
+    </div>
+
+    <div class="bg-body bg-image">
+        <img src="{{asset "img/header2.jpg"}}" alt="">
+    </div>
+
+    <header id="header" class="bg-dark">
+
+        <div id="top-bar">
+            <div class="container">
+                <nav class="menu module left">
+                    <a href="//hannesdaus.de">Home</a>
+                    <a href="{{@blog.url}}" class="active">Blog</a>
+                </nav>
+            </div>
+        </div>
+
+        <div id="nav-bar" class="container">
+            <nav>
+                <ul id="nav-primary" class="nav nav-primary">
+                    {{navigation}}
+                </ul>
+            </nav>
+
+            <div class="mobile-nav clearfix">
+                <div class="owner">
+                    <span class="name">{{meta_title}}</span>
+                </div>
+                <a href="#" class="panel-toggle" data-toggle="panel"><span><span></span></span></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="content" class="no-photo container">
+        {{{body}}}
+    </div>
+
+    <div id="share-it">
+        <a href="#" class="icon icon-circle icon-share"><i class="fa fa-share-alt"></i></a>
+        <ul class="share-list">
+            <li><a href="#" class="icon icon-circle icon-google-plus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#" class="icon icon-circle icon-twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" class="icon icon-circle icon-facebook"><i class="fa fa-facebook"></i></a></li>
+        </ul>
+    </div>
+
+<!-- Panel -->
+    <nav id="panel" class="bg-white">
+        <div class="panel-wrapper">
+
+
+            <!-- Menu -->
+            <div class="menu widget">
+                <h6>Navigation</h6>
+                <ul id="nav-mobile" class="nav nav-panel">
+                    <li><a href="index.html#home"><i class="ti-home"></i>Home</a></li>
+                    <li><a href="index.html#about"><i class="ti-comment-alt"></i>About</a></li>
+                    <li><a href="index.html#skills"><i class="ti-stats-up"></i>Skills</a></li>
+                    <li><a href="index.html#works"><i class="ti-heart"></i>Works</a></li>
+                    <li><a href="index.html#experience"><i class="ti-time"></i>Experience</a></li>
+                    <li><a href="index.html#references"><i class="ti-file"></i>References</a></li>
+                    <li><a href="index.html#latest-posts"><i class="ti-comments"></i>Latest Posts</a></li>
+                    <li><a href="index.html#contact"><i class="ti-mobile"></i>Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <script src="{{asset "js/jquery-1.12.3.min.js"}}"></script>
+    <script src="{{asset "js/plugins.js"}}"></script>
+    <script src="{{asset "js/core.js"}}"></script>
+    <script src="{{asset "js/prism.js"}}"></script>
+    {{ghost_foot}}
+
+</body>
+
+</html>
