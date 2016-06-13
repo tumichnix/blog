@@ -1,27 +1,18 @@
 {{!< default}}
-<div class="row">
-    <div class="col-md-9">
-        <div class="page-content">
-
-            {{#tag}}
-                <div class="main-header-content inner">
-                    <h1 class="page-title">{{name}}</h1>
-                    <h2 class="page-description">
-                        {{#if description}}
-                            {{description}}
-                        {{else}}
-                            {{../pagination.total}} Beiträge
-                        {{/if}}
-                    </h2>
-                </div>
-            {{/tag}}
-
-            <div class="masonry row">
-                <div class="masonry-sizer col-sm-6 col-xs-12"></div>
-                {{> "loop"}}
-            </div>
-            {{pagination}}
-        </div>
+{{#tag}}
+    <div class="main-header-content inner">
+        <h1 class="page-title">{{name}}</h1>
+        <h2 class="page-description">
+            {{#if description}}
+                {{description}}
+            {{else}}
+                {{../pagination.total}} Beiträge
+            {{/if}}
+        </h2>
     </div>
-    {{> "sidebar"}}
+{{/tag}}
+<div class="masonry row">
+    <div class="masonry-sizer col-sm-6 col-xs-12"></div>
+    {{> "loop"}}
 </div>
+{{pagination}}

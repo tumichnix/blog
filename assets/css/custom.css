@@ -5,3 +5,4 @@
 .icon.icon-circle.icon-github { background-color: #333333; }
 .icon.icon-circle.icon-github:hover, .icon.icon-circle.icon-github:focus { color: #fff; background-color: #646464; }
 .pagination > li > span { width: 150px; }
+.menu.widget > h6 { margin-top: 20px; }

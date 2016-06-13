@@ -1,7 +1,15 @@
 {{#foreach navigation}}
     {{#if @first}}
-        <li class="icon-link"><a href="{{url absolute="true"}}"><i class="fa fa-home"></i></a></li>
+        <li class="icon-link">
+            <a href="{{url absolute="true"}}">
+                <i class="fa fa-home"></i> {{label}}
+            </a>
+        </li>
     {{else}}
-        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+            <a href="{{url absolute="true"}}">
+                <i class="ti-file"></i> {{label}}
+            </a>
+        </li>
     {{/if}}
 {{/foreach}}
